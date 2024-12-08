@@ -22,8 +22,10 @@ document.getElementById("donate-btn1").addEventListener("click", function () {
   // trasition history
   const div = document.createElement("div");
   div.innerHTML = `
+    <div class="space-y-2 p-4 lg:p-8 border rounded-xl lg:w-3/4 mx-auto mb-3 lg:mb-5 text-center">
   <h4 class="text-xs lg:text-xl font-medium">${dontationAmount} Taka is Donated for famine-2024 at Noakhali, Bangladesh</h4>
   <p class="text-xs lg:text-xl text-secondary">Date: ${bangladeshTime} (Bangladesh Standard Time)</p>
+  </div>
   `;
   document.getElementById("Transition-container").appendChild(div);
   if (0 < dontationAmount) {
@@ -48,8 +50,10 @@ document.getElementById("donate-btn2").addEventListener("click", function () {
   // trasition history
   const div = document.createElement("div");
   div.innerHTML = `
+    <div class="space-y-2 p-4 lg:p-8 border rounded-xl lg:w-3/4 mx-auto mb-3 lg:mb-5 text-center">
   <h4 class="text-xs lg:text-xl font-medium">${dontationAmount}Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</h4>
   <p class="text-xs lg:text-xl text-secondary">Date: ${bangladeshTime} (Bangladesh Standard Time)</p>
+  </div>
   `;
   document.getElementById("Transition-container").appendChild(div);
   if (0 < dontationAmount) {
@@ -74,8 +78,10 @@ document.getElementById("donate-btn3").addEventListener("click", function () {
   // trasition history
   const div = document.createElement("div");
   div.innerHTML = `
+  <div class="space-y-2 p-4 lg:p-8 border rounded-xl lg:w-3/4 mx-auto mb-3 lg:mb-5 text-center">
   <h4 class="text-xs lg:text-xl font-medium">${dontationAmount}Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</h4>
   <p class="text-xs lg:text-xl text-secondary">Date: ${bangladeshTime} (Bangladesh Standard Time)</p>
+  </div>
   `;
   document.getElementById("Transition-container").appendChild(div);
   if (0 < dontationAmount) {

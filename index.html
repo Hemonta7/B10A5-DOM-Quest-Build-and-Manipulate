@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,15 +38,17 @@
                 <img class="h-5 w-5 lg:w-7 lg:h-7" src="./assets/coin.png" alt="">
                 <p class="text-sm lg:text-xl font-semibold text-secondary"><span id="display">5500</span> BDT</p>
             </div>
+            <!-- button  -->
+            <div class="flex justify-center gap-3">
+                <button id="donation-page"
+                    class="btn bg-common text-black text-sm lg:text-base lg:px-8">Donation</button>
+                <button id="history-page"
+                    class="btn bg-transparent text-secondary text-sm lg:text-base lg:px-8">History</button>
+            </div>
         </nav>
     </header>
     <main>
-        <section class="mx-12 lg:mx-36 my-28 lg:my-40 space-y-4 lg:space-y-8">
-            <!-- button  -->
-            <div class="flex justify-center gap-3">
-                <button class="btn bg-common text-black text-sm lg:text-base lg:px-8">Donation</button>
-                <button class="btn bg-transparent text-secondary text-sm lg:text-base lg:px-8">History</button>
-            </div>
+        <section id="show-donation-page" class="mx-12 lg:mx-36 my-28 lg:my-40 space-y-4 lg:space-y-8">
             <!-- card 1 -->
             <div class="flex flex-col lg:flex-row bg-base-100 shadow-xl p-8 border gap-8 rounded-2xl">
                 <figure class="flex-1">
@@ -67,7 +69,8 @@
                         in need.</p>
                     <input id="input1" type="number" placeholder="Write Donation Amount"
                         class="input input-bordered w-full text-secondary text-sm lg:text-lg" />
-                    <button id="donate-btn1" class="btn w-full bg-common text-black border-none text-sm lg:text-lg">Donate Now</button>
+                    <button id="donate-btn1"
+                        class="btn w-full bg-common text-black border-none text-sm lg:text-lg">Donate Now</button>
                 </div>
             </div>
             <!-- card 2 -->
@@ -91,7 +94,8 @@
                         those in urgent need.</p>
                     <input id="input2" type="text" placeholder="Write Donation Amount"
                         class="input input-bordered w-full text-secondary text-sm lg:text-lg" />
-                    <button id="donate-btn2" class="btn w-full bg-common text-black border-none text-sm lg:text-lg">Donate Now</button>
+                    <button id="donate-btn2"
+                        class="btn w-full bg-common text-black border-none text-sm lg:text-lg">Donate Now</button>
                 </div>
             </div>
             <!-- card 3 -->
@@ -116,8 +120,16 @@
                         donation to support these brave individuals in their time of need.</p>
                     <input id="input3" type="text" placeholder="Write Donation Amount"
                         class="input input-bordered w-full text-secondary text-sm lg:text-lg" />
-                    <button id="donate-btn3" class="btn w-full bg-common text-black border-none text-sm lg:text-lg">Donate Now</button>
+                    <button id="donate-btn3"
+                        class="btn w-full bg-common text-black border-none text-sm lg:text-lg">Donate Now</button>
                 </div>
+            </div>
+        </section>
+        <!-- Transition History -->
+        <section id="show-history-page" class="hidden mx-12 lg:mx-36 my-28 lg:my-40 space-y-4 lg:space-y-8">
+            <div id="Transition-container"
+                class="space-y-2 p-4 lg:p-8 border rounded-xl lg:w-3/4 mx-auto mb-3 lg:mb-5 text-center">
+                <!-- code append from index.js  -->
             </div>
         </section>
         <!-- modal -->

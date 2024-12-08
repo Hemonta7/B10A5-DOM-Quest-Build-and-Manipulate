@@ -12,8 +12,6 @@
     <!-- Daisy ui and tailwind css -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font awsome cdn -->
-    <script src="https://kit.fontawesome.com/f3d1f714a3.js" crossorigin="anonymous"></script>
     <!-- Favicon -->
     <link rel="icon" href="./assets/donate-icon.png" type="image/x-icon">
     <!-- CSS styles -->
@@ -38,7 +36,7 @@
             </div>
             <div class="flex items-center gap-1 lg:gap-3">
                 <img class="h-5 w-5 lg:w-7 lg:h-7" src="./assets/coin.png" alt="">
-                <p class="text-sm lg:text-xl font-semibold text-secondary"><span>5500</span> BDT</p>
+                <p class="text-sm lg:text-xl font-semibold text-secondary"><span id="display">5500</span> BDT</p>
             </div>
         </nav>
     </header>
@@ -57,7 +55,7 @@
                 <div class="flex-1 space-y-2 lg:space-y-3">
                     <button class="flex btn text-secondary">
                         <img class="h-5 lg:h-6 w-5 lg:w-6" src="./assets/coin.png" alt="">
-                        <p class="text-sm lg:text-base font-normal text-secondary"><span>0</span> BDT</p>
+                        <p class="text-sm lg:text-base font-normal text-secondary"><span id="display1">0</span> BDT</p>
                     </button>
                     <h2 class="text:lg lg:text-xl font-bold">Donate for Flood at Noakhali, Bangladesh</h2>
                     <p class="text-secondary text-sm lg:text-base font-light">The recent floods in Noakhali have caused
@@ -67,9 +65,9 @@
                         makes difference. Please
                         join us in supporting the relief efforts and making a positive impact on the lives of those
                         in need.</p>
-                    <input type="text" placeholder="Write Donation Amount"
+                    <input id="input1" type="number" placeholder="Write Donation Amount"
                         class="input input-bordered w-full text-secondary text-sm lg:text-lg" />
-                    <button class="btn w-full bg-common text-black border-none text-sm lg:text-lg">Donate Now</button>
+                    <button id="donate-btn1" class="btn w-full bg-common text-black border-none text-sm lg:text-lg">Donate Now</button>
                 </div>
             </div>
             <!-- card 2 -->
@@ -80,7 +78,7 @@
                 <div class="flex-1 space-y-2 lg:space-y-3">
                     <button class="flex btn text-secondary">
                         <img class="h-5 lg:h-6 w-5 lg:w-6" src="./assets/coin.png" alt="">
-                        <p class="text-sm lg:text-base font-normal text-secondary"><span>0</span> BDT</p>
+                        <p class="text-sm lg:text-base font-normal text-secondary"><span id="display2">0</span> BDT</p>
                     </button>
                     <h2 class="text:lg lg:text-xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h2>
                     <p class="text-secondary text-sm lg:text-base font-light">The recent floods in Feni have devastated
@@ -91,9 +89,9 @@
                         disaster. Every
                         contribution counts towards making a real difference. Please consider donating today to assist
                         those in urgent need.</p>
-                    <input type="text" placeholder="Write Donation Amount"
+                    <input id="input2" type="text" placeholder="Write Donation Amount"
                         class="input input-bordered w-full text-secondary text-sm lg:text-lg" />
-                    <button class="btn w-full bg-common text-black border-none text-sm lg:text-lg">Donate Now</button>
+                    <button id="donate-btn2" class="btn w-full bg-common text-black border-none text-sm lg:text-lg">Donate Now</button>
                 </div>
             </div>
             <!-- card 3 -->
@@ -104,7 +102,7 @@
                 <div class="flex-1 space-y-2 lg:space-y-3">
                     <button class="flex btn text-secondary">
                         <img class="h-5 lg:h-6 w-5 lg:w-6" src="./assets/coin.png" alt="">
-                        <p class="text-sm lg:text-base font-normal text-secondary"><span>0</span> BDT</p>
+                        <p class="text-sm lg:text-base font-normal text-secondary"><span id="display3">0</span> BDT</p>
                     </button>
                     <h2 class="text:lg lg:text-xl font-bold">Aid for Injured in the Quota Movement</h2>
                     <p class="text-secondary text-sm lg:text-base font-light">The recent Quota movement has resulted in
@@ -116,14 +114,29 @@
                         donation plays a vital role in alleviating their suffering and aiding in their recovery. Please
                         consider making a
                         donation to support these brave individuals in their time of need.</p>
-                    <input type="text" placeholder="Write Donation Amount"
+                    <input id="input3" type="text" placeholder="Write Donation Amount"
                         class="input input-bordered w-full text-secondary text-sm lg:text-lg" />
-                    <button class="btn w-full bg-common text-black border-none text-sm lg:text-lg">Donate Now</button>
+                    <button id="donate-btn3" class="btn w-full bg-common text-black border-none text-sm lg:text-lg">Donate Now</button>
                 </div>
             </div>
         </section>
+        <!-- modal -->
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle text-center">
+            <div class="modal-box space-y-2">
+                <h3 class=" text-3xl lg:text-5xl font-bold">Congrates!</h3>
+                <div class="flex justify-center"><img class="lg:h-10 lg:w-10" src="./assets/coin.png" alt=""></div>
+                <p class="py-4">You have donate for humankind</p>
+                <h4 class="text-base lg:text-2xl font-bold">Sucessfully</h4>
+                <div class="modal-action flex justify-center">
+                    <form method="dialog">
+                        <button class="btn text-xs lg:text-base">Close confirmation</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
     </main>
-    <script src="./js/blog.js"></script>
+    <script src="./js/utilities.js"></script>
+    <script src="./js/index.js"></script>
     <script>
         tailwind.config = {
             theme: {
